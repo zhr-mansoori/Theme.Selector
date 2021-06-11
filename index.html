@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Theme Selector</title>
+<link href="css/3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+	
+  <div>
+	  <div><h1>Header</h1>
+	  </div>
+	
+<div>
+			<nav>
+		  		<ul>
+					<li><a href="#">Link1</a></li>
+		  			<li><a href="#">Link1</a></li>
+		  			<li><a href="#">Link1</a></li>
+		  			<li><a href="#">Link1</a></li>
+		  			<li><a href="#">Link1</a></li>
+		  			
+		  		</ul>
+		  	</nav>
+		</div>
+		
+	</header>
+	<main>
+	  <article><h3>Lorem ipsum.</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ab et officia laboriosam sit libero aut accusantium, eos pariatur iste mollitia necessitatibus delectus, nulla nam tenetur similique. Aliquam sed, amet unde, inventore debitis nisi vel. Autem placeat facilis et labore, rem consequuntur ducimus accusantium natus provident deleniti dignissimos tempora blanditiis, sunt explicabo quam mollitia aperiam libero, ab minima cumque esse possimus animi ratione dolor. Obcaecati quis, excepturi deleniti magnam non.</p>
+		  <br>
+		<select id="SelectTheme">
+				<option value="1.css">Theme No.1</option>
+				<option value="2.css">Theme No.2</option>
+				<option value="3.css">Theme No.3</option>
+				<option value="4.css">Theme No.4</option>
+				<option value="5.css">Theme No.5</option>
+				<option value="6.css">Theme No.6</option>
+				<option value="7.css">Theme No.7</option>
+				<option value="8.css">Theme No.8</option>
+				<option value="9.css">Theme No.9</option>
+				<option value="10.css">Theme No.10</option>
+			</select>
+			<button id="SelectThemeButton">Select Theme</button>
+		</article>
+		
+	  <aside>
+		  <p><h3>Login:</h3></p>
+		<form action="">
+		<label for="">Username</label>
+		<input type="text">
+		<label for="">Password</label>
+		<input type="text">
+		<input type="submit">
+		</form>
+		</aside>
+    </main>
+	<footer><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nobis aperiam quisquam nostrum, sunt maiores. Voluptatum dignissimos id fugiat voluptate ex, impedit quam neque, sunt sequi deleniti, aperiam omnis eum?</p>
+	<div>
+		
+			
+		
+	</div>
+	</footer>
+</body>
+	<script>	
+		var sbutton = document.querySelector("#SelectThemeButton");
+		
+		sbutton.addEventListener("click", SelectTheme, false);
+		function SelectTheme(){
+			
+				var SelectTheme = document.querySelector("#SelectTheme");
+				var Theme = SelectTheme.options[SelectTheme.selectedIndex].value;
+				var styles = document.createElement('link');
+			  	styles.rel = 'stylesheet';
+			  	styles.type = 'text/css';
+			  	styles.media = 'screen';
+			  	styles.href = 'css/'+Theme;
+			  	document.getElementsByTagName('head')[0].appendChild(styles);
+		}
+	
+	
+	</script>
+</html>
